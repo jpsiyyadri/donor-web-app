@@ -222,15 +222,15 @@
         // Handle registration button click
         document.getElementById('registerButton').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent form submission
-            var age = document.getElementById('registerAge').value;
-            var smokingHabits = document.getElementById('registerSmokingHabits').value;
+            // var age = document.getElementById('registerAge').value;
+            // var smokingHabits = document.getElementById('registerSmokingHabits').value;
 
             // Validate age and smoking habits
-            if (age < 18 || age > 60 || smokingHabits === 'Yes') {
-                var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                errorModal.show();
-                return;
-            }
+            // if (age < 18 || age > 60 || smokingHabits === 'Yes') {
+            //     var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+            //     errorModal.show();
+            //     return;
+            // }
 
             // Show success message
             var successModal = new bootstrap.Modal(document.getElementById('successModal'));
