@@ -1,0 +1,19 @@
+/* styles.css */
+
+.form-container {
+    margin-top: 20px;
+}
+
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger.active {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.d-none {
+    display: none;
+}

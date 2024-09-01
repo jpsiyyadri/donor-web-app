@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing</title>
+    <title>Blood Donors and Recipients</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="navbar-component.js" defer></script>
+
 </head>
+
 <body>
-    This is Landing Page
-    <div>
-        <div>
-            <a href="donor/home.html">Donor</a>
+    <navbar-component></navbar-component>
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2>For Donors</h2>
+                <p>Login or register to become a donor and help save lives. Get notified whenever there's a request from a recipient.</p>
+                <a href="donor-home.html" class="btn btn-danger">Login as Donor</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h2>For Recipients</h2>
+                <p>Login or register to find blood donors in your area. Request blood from a donor and view their contact information once they accept.</p>
+                <button class="btn btn-danger">Login as Recipient</button>
+            </div>
+            <div class="col-md-12">
+                <h2>For Guests</h2>
+                <p>Search for donors in your area without registering. To view their personal information, please register on the app.</p>
+                <a href="recipient-dashboard.html" class="btn btn-danger">Search Donors</a>
+            </div>
         </div>
-        <div>
-            <a href="recepient/home.html">Recepient</a>
-        </div>
-    </div>
+    </main>
+
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 BloodApp. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="app.js"></script>
 </body>
+
 </html>
