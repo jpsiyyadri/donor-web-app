@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="navbar-component.js" defer></script>
+</head>
+
+<body>
+    <navbar-component></navbar-component>
+    <main class="container my-5 dashboard-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">Requests from Recipients</div>
+                    <div class="dashboard-card-body">
+                        <div class="request-item">
+                            <h5>Request #12345</h5>
+                            <p>Recipient: John Doe</p>
+                            <p>Requested Date: 01 Sep 2024</p>
+                            <span class="badge bg-danger">Urgent</span>
+                            <div class="action-buttons">
+                                <button class="btn btn-success btn-sm">Accept</button>
+                                <button class="btn btn-danger btn-sm">Deny</button>
+                            </div>
+                        </div>
+                        <div class="request-item">
+                            <h5>Request #12346</h5>
+                            <p>Recipient: Jane Smith</p>
+                            <p>Requested Date: 02 Sep 2024</p>
+                            <span class="badge bg-warning">Normal</span>
+                            <div class="action-buttons">
+                                <button class="btn btn-success btn-sm">Accept</button>
+                                <button class="btn btn-danger btn-sm">Deny</button>
+                            </div>
+                        </div>
+                        <!-- Add more request items here -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">Previously Accepted Donations</div>
+                    <div class="dashboard-card-body">
+                        <div class="accepted-item">
+                            <h5>Donation #98765</h5>
+                            <p>Date: 15 Aug 2024</p>
+                            <p>Recipient: Alice Johnson</p>
+                            <span class="badge bg-success">Accepted</span>
+                        </div>
+                        <div class="accepted-item">
+                            <h5>Donation #98766</h5>
+                            <p>Date: 20 Aug 2024</p>
+                            <p>Recipient: Bob Brown</p>
+                            <span class="badge bg-success">Accepted</span>
+                        </div>
+                        <!-- Add more accepted items here -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">Previously Denied Donations</div>
+                    <div class="dashboard-card-body">
+                        <div class="denied-item">
+                            <h5>Donation #87654</h5>
+                            <p>Date: 10 Aug 2024</p>
+                            <p>Recipient: Carol White</p>
+                            <span class="badge bg-danger">Denied</span>
+                        </div>
+                        <div class="denied-item">
+                            <h5>Donation #87655</h5>
+                            <p>Date: 12 Aug 2024</p>
+                            <p>Recipient: Dave Green</p>
+                            <span class="badge bg-danger">Denied</span>
+                        </div>
+                        <!-- Add more denied items here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 BloodApp. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donor Registration and Login</title>
+    <title>Recipient Registration and Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -29,7 +29,7 @@
                 </div>
 
                 <div id="loginForm" class="form-container">
-                    <h2>Donor Login</h2>
+                    <h2>Recipient Login</h2>
                     <form>
                         <div class="mb-3">
                             <label for="loginUsername" class="form-label">Username</label>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div id="registerForm" class="form-container d-none">
-                    <h2>Donor Registration</h2>
+                    <h2>Recipient Registration</h2>
                     <form id="registrationForm">
                         <div class="mb-3">
                             <label for="registerName" class="form-label">Full Name</label>
@@ -110,42 +110,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>To become a blood donor, you must meet the following criteria:</p>
+                    <p>To become a blood recipient, you must meet the following criteria:</p>
                     <form>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="age">
-                            <label class="form-check-label" for="age">
-                                Age between 18-60 years
+                            <input class="form-check-input" type="checkbox" id="ll">
+                            <label class="form-check-label" for="ll">
+                                I don't share donors personal information with anyone.
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="weight">
-                            <label class="form-check-label" for="weight">
-                                Weight 45 kgs or more
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="hemoglobin">
-                            <label class="form-check-label" for="hemoglobin">
-                                Haemoglobin level of 12.5 gm% minimum
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="donation">
-                            <label class="form-check-label" for="donation">
-                                Last blood donation was 3 months earlier
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="health">
-                            <label class="form-check-label" for="health">
-                                Healthy and have not suffered from malaria, typhoid, or other transmissible diseases recently
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="honest">
-                            <label class="form-check-label" for="honest">
-                                Honest about health status and history
+                            <input class="form-check-input" type="checkbox" id="privacy">
+                            <label class="form-check-label" for="privacy">
+                                I understand that the information provided will be used to find blood donors in my area.
                             </label>
                         </div>
                     </form>
@@ -186,7 +162,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Thank you for registering as a blood donor. You are now part of a life-saving community!</p>
+                    <p>Thank you for registering as a recipient. You are now part of a life-saving community!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="redirectToLogin">Go to Login</button>
@@ -196,7 +172,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="donor.js"></script>
+    <script src="recipient.js"></script>
     <script>
         // Default view is the login form
         document.getElementById('loginForm').classList.remove('d-none');
@@ -215,22 +191,13 @@
             termsModal.hide();
             document.getElementById('registerForm').classList.remove('d-none');
             document.getElementById('loginForm').classList.add('d-none');
-            // enable register button
+            // enable the register button
             document.getElementById('registerButton').disabled = false;
         });
 
         // Handle registration button click
         document.getElementById('registerButton').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent form submission
-            var age = document.getElementById('registerAge').value;
-            var smokingHabits = document.getElementById('registerSmokingHabits').value;
-
-            // Validate age and smoking habits
-            if (age < 18 || age > 60 || smokingHabits === 'Yes') {
-                var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                errorModal.show();
-                return;
-            }
 
             // Show success message
             var successModal = new bootstrap.Modal(document.getElementById('successModal'));
@@ -253,10 +220,10 @@
             }
         });
 
-        // on submit loginForm redirect the user to donor-dashboard.html
+        // on submit loginForm redirect the user to recipient-dashboard.html
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            window.location.href = 'donor-dashboard.html';
+            window.location.href = 'recipient-dashboard.html';
         });
     </script>
 </body>
